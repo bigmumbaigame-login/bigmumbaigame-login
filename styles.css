@@ -1,132 +1,42 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Global */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
+/* Base & Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Arial, sans-serif; background:#f9f9f9; color:#333; }
 
 /* Header */
-header {
-  background-color: #121212;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-}
+.site-header { background:#fff; box-shadow:0 2px 4px rgba(0,0,0,0.1); display:flex; justify-content:space-between; align-items:center; padding:16px 24px; }
+.site-header .logo { font-size:1.5rem; font-weight:bold; }
+.site-header nav ul { display:flex; gap:16px; list-style:none; }
+.site-header nav a { text-decoration:none; color:#333; padding:8px; }
+.site-header nav a:hover { background:#eee; border-radius:4px; }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
+/* Hero */
+.hero { background:#fff url('') center/cover no-repeat; padding:60px 24px; text-align:center; }
+.hero-inner { max-width:600px; margin:0 auto; }
+.hero-inner h1 { font-size:2.5rem; margin-bottom:16px; }
+.hero-inner p { margin-bottom:24px; }
+.btn-primary { padding:12px 24px; background:#ffcc00; color:#000; text-decoration:none; font-size:1rem; font-weight:bold; border-radius:4px; }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
+/* Wallet */
+.wallet { padding:24px; display:flex; justify-content:center; }
+.wallet-card { background:#fff; padding:24px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); width:320px; text-align:center; }
+.wallet-card .balance { font-size:1.8rem; margin:16px 0; }
+.actions { display:flex; gap:16px; justify-content:center; }
+.btn-secondary { padding:8px 16px; background:#eee; border:none; border-radius:4px; cursor:pointer; }
+.btn-secondary:hover { background:#ddd; }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+/* Game Options */
+.game-options { padding:24px; }
+.game-options h2 { text-align:center; margin-bottom:16px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:16px; }
+.grid .card { background:#fff; padding:16px; border-radius:6px; box-shadow:0 1px 4px rgba(0,0,0,0.1); text-align:center; cursor:pointer; }
+.grid .card:hover { background:#f0f0f0; }
 
-nav a:hover {
-  color: #ffcc00;
-}
-
-/* Hero Section */
-.hero {
-  background: url('https://images.unsplash.com/photo-1580674286347-e4b72fd37057?fit=crop&w=1600') center/cover no-repeat;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-}
-
-.hero-content {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 10px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.btn {
-  background-color: #ffcc00;
-  padding: 12px 24px;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #e6b800;
-}
-
-/* Features */
-.features {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #fff;
-}
-
-.features h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #222;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.card {
-  background-color: #fafafa;
-  padding: 20px;
-  border-radius: 10px;
-  width: 280px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  font-size: 1.4rem;
-  color: #000;
-}
+/* History Table */
+.history { padding:24px; overflow-x:auto; }
+.history h2 { margin-bottom:16px; }
+.history table { width:100%; border-collapse:collapse; }
+.history th, .history td { padding:12px; text-align:center; border-bottom:1px solid #ddd; }
+.history th { background:#f0f0f0; }
 
 /* Footer */
-footer {
-  background-color: #121212;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
+footer { text-align:center; padding:16px; background:#fff; margin-top:24px; box-shadow:0 -1px 4px rgba(0,0,0,0.1); }
